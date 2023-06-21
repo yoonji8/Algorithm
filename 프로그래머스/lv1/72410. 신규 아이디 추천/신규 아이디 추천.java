@@ -29,7 +29,10 @@ class Solution {
             }
         }
 
-        String step5 = step4.isEmpty() ? "a" : step4;
+        String step5 = step4;
+        if(step5.isEmpty()){
+            step5 ="a";
+        }
         String step6 = step5;
         if(step6.length()>=16){
             step6 = step6.substring(0,15);
