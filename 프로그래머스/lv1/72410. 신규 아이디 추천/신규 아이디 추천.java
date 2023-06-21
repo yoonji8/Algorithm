@@ -1,9 +1,10 @@
 class Solution {
     public String solution(String new_id) {
+        
         String step1 = new_id.toLowerCase();
-
         StringBuilder sb1 = new StringBuilder();
         char[] arr = step1.toCharArray();
+        
         for(char ch : arr){
             if( Character.isLowerCase(ch) ||
                     Character.isDigit(ch) ||
@@ -20,7 +21,7 @@ class Solution {
         String step4 = step3;
         if (step4.length() > 0) {
             if (step4.charAt(0) == '.') {
-                step4 = step4.substring(1, step4.length());
+                step4 = step4.substring(1);
             }
         }
         if (step4.length() > 0) {
@@ -33,6 +34,7 @@ class Solution {
         if(step5.isEmpty()){
             step5 ="a";
         }
+        
         String step6 = step5;
         if(step6.length()>=16){
             step6 = step6.substring(0,15);
@@ -40,6 +42,7 @@ class Solution {
                 step6 = step6.substring(0,step6.length()-1);
             }
         }
+        
         StringBuilder answer = new StringBuilder(step6);
         if (answer.length() <= 2) {
             while(answer.length()<3){
