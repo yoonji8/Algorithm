@@ -7,8 +7,8 @@ class Solution {
             String a1 = Integer.toBinaryString(arr1[i]);
             String a2 = Integer.toBinaryString(arr2[i]);
             
-            a1 = String.format("%" + n + "s", a1).replace(' ', '0');
-            a2 = String.format("%" + n + "s", a2).replace(' ', '0');
+            a1 = String.format("%" + n + "s", a1);
+            a2 = String.format("%" + n + "s", a2);
             
             String str = "";
             
